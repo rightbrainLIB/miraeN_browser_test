@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rightbrainlib.github.io/miraeN_browser_test/",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
