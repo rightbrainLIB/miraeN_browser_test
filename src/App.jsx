@@ -14,16 +14,14 @@ function App() {
     setHeight(window.innerHeight)
   }
 
-
-// 이미지 업로드 input의 onChange
-const saveImgFile = () => {
-	const file = imgRef.current.files[0];
-	const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = () => {
+  const saveImgFile = () => {
+    const file = imgRef.current.files[0];
+    const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
         setImgFile(reader.result);
-   	};
-};
+      };
+  };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -51,7 +49,7 @@ const saveImgFile = () => {
           onChange={saveImgFile}
           ref={imgRef}
         />
-      <img src={screenImg} alt='' />
+        <img src={screenImg} alt='' />
       </div>
     </>
   )
