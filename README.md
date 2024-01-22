@@ -1,8 +1,5 @@
-# React + Vite
+# 미래엔 브라우저 해상도 테스트 페이지
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+미래엔 브라우저 해상도 테스트 페이지 (디자인 확인용)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://rightbrainlib.github.io/miraeN_browser_test/
