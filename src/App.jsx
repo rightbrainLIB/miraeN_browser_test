@@ -17,10 +17,21 @@ function App() {
   const saveImgFile = () => {
     const file = imgRef.current.files[0];
     const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setImgFile(reader.result);
+    };
+  };
+    
+  const delImgFile = () => {
+    if(imgRef.current.files.length > 0) {
+      const file = imgRef.current.files[0];
+      const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = () => {
-        setImgFile(reader.result);
+        setImgFile("");
       };
+    }
   };
 
   useEffect(() => {
@@ -35,12 +46,12 @@ function App() {
         <div className='screenSize'>
           현재 브라우저 해상도<br />
           width : {width}<br />
-          height : {height}
+          height : {height}<br /><br />
+          * 해상도는 스크롤영역 포함입니다.
         </div>
         <img
           className='testImg'
           src={imgFile}
-          onError="this.style.visibility='hidden'"
         />
         <input
           type="file"
@@ -49,7 +60,8 @@ function App() {
           onChange={saveImgFile}
           ref={imgRef}
         />
-        <img src={screenImg} alt='' />
+        <img src={screenImg} />
+        <button type='button' className='delImgBtn' onClick={delImgFile}>이미지 삭제하기</button>
       </div>
     </>
   )

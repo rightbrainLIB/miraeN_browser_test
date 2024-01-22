@@ -1,3 +1,4 @@
+/* S : reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,6 +42,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* E : reset */
 
 .wrap {
   position: relative;
@@ -63,8 +65,8 @@ table {
 #testImgInput {
   position: absolute;
   position: fixed;
-  width: 200px;
-  top: 120px;
+  width: 230px;
+  top: 150px;
   left: 20px;
   background-color: #fff;
   border-radius: 15px;
@@ -73,4 +75,15 @@ table {
 }
 img {
   display: block;
+}
+.delImgBtn {
+  position: absolute;
+  position: fixed;
+  top: 215px;
+  left: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px 20px;
+  z-index: 100;
+  border: 0;
 }
